@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 //  initializing controller routes
 const recipeControl = require('./controllers/recipes')
-const ingredientControl = require('./controllers/ingredients')
+const ingredientsControl = require('./controllers/ingredients')
 // const teamControl = require('./controllers/teamControl')
 //  initialize body parse + cors
 const cors = require('cors')
