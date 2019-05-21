@@ -2,8 +2,8 @@ const mongoose = require('./connection')
 // console.log(mongoose)
 const RecipeData = require('./RecipeData.json')
 
-const Recipes = require('./models/Recipes')
-const Ingredients = require('./models/Ingredients')
+const Recipes = require('./Models/Recipes')
+const Ingredients = require('./Models/Ingredients')
 
 Recipes.deleteMany({}).then(() => {
   Recipes.create(RecipeData)
