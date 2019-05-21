@@ -1,5 +1,5 @@
 const mongoose = require('./connection')
-// console.log(mongoose)
+console.log(mongoose)
 // @ts-ignore
 const RecipeData = require('./RecipeData.json')
 

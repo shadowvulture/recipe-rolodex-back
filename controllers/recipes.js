@@ -35,7 +35,7 @@ router.put('/update/:id', (req, res) => {
 })
 
 // Delete a Recipe by id
-router.delete('/delete/:id', (req, res) => {
+router.delete('/delete/:id', verify, (req, res) => {
   Recipes.deleteOne({ _id: req.params.id }).then(deleted => {
     console.log(deleted)
     res.json(deleted)

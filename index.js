@@ -27,4 +27,4 @@ app.listen(app.get('port'), () => {
 })
 
 
-'mongodb://badmin:pa55w0rd@cluster0-shard-00-00-czdht.mongodb.net:27017,cluster0-shard-00-01-czdht.mongodb.net:27017,cluster0-shard-00-02-czdht.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true'
+// 'mongodb://badmin:pa55w0rd@cluster0-shard-00-00-czdht.mongodb.net:27017,cluster0-shard-00-01-czdht.mongodb.net:27017,cluster0-shard-00-02-czdht.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true'
