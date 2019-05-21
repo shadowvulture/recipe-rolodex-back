@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
 
+
 //  Route Middleware
 app.use('/api/recipe', recipeControl)
 app.use( '/api/', ingredientsControl )

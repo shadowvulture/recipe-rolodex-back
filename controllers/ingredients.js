@@ -5,7 +5,7 @@ const Ingredients = require( '../db/models/Ingredients' )
 console.log(Ingredients)
 
 // List all Ingredients
-router.get('/recipes', (req, res) => {
+router.get('/ingredients', (req, res) => {
   Ingredients.find({}).then(allIngredients => {
     console.log(allIngredients)
     res.json(allIngredients)
