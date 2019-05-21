@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.use('/api/', recipeControl)
-app.use('/api/', ingredientsControl)
+app.use('/api/recipes', recipeControl)
+app.use('/api/ingredients', ingredientsControl)
 
 app.set('port', process.env.PORT || 3001)
 
