@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const Recipes = require( '../db/models/Recipes' )
+const Recipes = require( '../db/Models/Recipes' )
 console.log(Recipes)
 
 // List all Recipes

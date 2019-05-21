@@ -5,7 +5,7 @@ const recipeControl = require('./controllers/recipes')
 const ingredientsControl = require('./controllers/ingredients')
 
 //  Importing Auth Route
-const authRoute = require('./routes/auth')
+const authRoute = require('./Routes/auth')
 
 //  initialize body parse + cors
 const cors = require('cors')
