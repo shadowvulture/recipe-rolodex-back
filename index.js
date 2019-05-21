@@ -5,7 +5,7 @@ const recipeControl = require('./controllers/recipes')
 const ingredientsControl = require('./controllers/ingredients')
 
 //  Importing Auth Route
-const authRoute = require('./routes/auth')
+const authRoute = require('./Routes/auth')
 
 //  initialize body parse + cors
 const cors = require('cors')
@@ -25,3 +25,6 @@ app.set('port', process.env.PORT || 3001)
 app.listen(app.get('port'), () => {
   console.log(`✅ SERVER RUNNING PORT: ${app.get('port')} 🌟`)
 })
+
+
+'mongodb://badmin:pa55w0rd@cluster0-shard-00-00-czdht.mongodb.net:27017,cluster0-shard-00-01-czdht.mongodb.net:27017,cluster0-shard-00-02-czdht.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true'
