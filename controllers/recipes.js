@@ -35,7 +35,12 @@ router.put('/update/:id', (req, res) => {
 })
 
 // Delete a Recipe by id
-router.delete('/delete/:id', verify, (req, res) => {
+router.delete( '/delete/:id', verify, ( req, res ) =>
+{
+  //  Let's keep tabs on who deletes things
+  // res.send( req.user )
+  // User.findbyOne( { _id: req.user } )
+
   Recipes.deleteOne({ _id: req.params.id }).then(deleted => {
     console.log(deleted)
     res.json(deleted)
