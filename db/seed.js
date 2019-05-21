@@ -1,5 +1,6 @@
 const mongoose = require('./connection')
 // console.log(mongoose)
+// @ts-ignore
 const RecipeData = require('./RecipeData.json')
 
 const Recipes = require('./Models/Recipes')
