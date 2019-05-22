@@ -5,8 +5,8 @@
     "Cooktime": "15-30 min",
     "Instructions": "Prep stuff.  Put stuff together.  Cook stuff.  Enjoy",
     "Ingredients": {
-        "FoodAmount": "[1 lb, 1/4 C, 1/4 lb, 1 t, 5-6 cloves, 1/2 C, 2]",
-        "FoodType": "[{Pasta (spaghetti or rigatoni)}, Extra Virgin Olive Oil, Pancetta (Italian Bacon), chopped, Red Pepper Flakes, Garlic chopped, Dry White Wine, Egg Yolks]"
+        "FoodAmount": ["1 lb", "1/4 C", "1/4 lb", "1 t", "5-6 cloves", "1/2 C", "2"],
+        "FoodType": ["Pasta (spaghetti or rigatoni)", "Extra Virgin Olive Oil", "Pancetta (Italian Bacon), chopped", "Red Pepper Flakes", "Garlic chopped", "Dry White Wine", "Egg Yolks"]
 
     }},
     {"Title": "Thai Chicken Basil",
