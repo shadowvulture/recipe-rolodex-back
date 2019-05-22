@@ -1,7 +1,7 @@
 const mongoose = require('../connection')
 
 const IngredientsSchema = new mongoose.Schema( {
-    FoodAmount: Array,
+    FoodAmount: [String],
     FoodType: Array,
     AllergyFlag: Array
 
