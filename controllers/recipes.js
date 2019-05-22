@@ -35,7 +35,7 @@ router.put('/update/:id', (req, res) => {
 })
 
 // Delete a Recipe by id
-router.delete( '/delete/:id', verify, ( req, res ) =>
+router.delete( '/delete/:id', ( req, res ) =>
 {
   //  Let's keep tabs on who deletes things
   // res.send( req.user )
