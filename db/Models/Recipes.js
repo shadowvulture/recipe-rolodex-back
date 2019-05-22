@@ -7,7 +7,9 @@ const RecipesSchema = new mongoose.Schema( {
     Instructions: String,
     Ingredients:  {
         type: mongoose.Schema.Types.Mixed,
-        ref: 'Ingredients'
+        ref: 'Ingredients',
+        default: undefined
+
       },
 })
 
