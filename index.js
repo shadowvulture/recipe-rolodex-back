@@ -17,7 +17,7 @@ app.use(cors())
 
 //  Route Middleware
 app.use('/api/recipe', recipeControl)
-app.use( '/api/', ingredientsControl )
+// app.use( '/api/', ingredientsControl )
 app.use('/api/user', authRoute)
 
 app.set('port', process.env.PORT || 3001)

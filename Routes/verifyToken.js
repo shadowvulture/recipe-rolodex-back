@@ -6,7 +6,7 @@ module.exports = function( req, res, next )
     if ( !token ) return res.status( 401 ).send( 'You dont have a token.  Access Denied' )
 
     try {
-        const verified = jwt.verify( token, process.env.Token_SECRET )
+        const verified = jwt.verify( token, process.env.TOKEN_SECRET )
         req.user = verified
         //push through to the next screen
         next()
