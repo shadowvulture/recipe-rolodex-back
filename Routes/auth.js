@@ -9,7 +9,7 @@ router.post( '/register', async ( req, res ) =>
 {
     //  Validate data before making user
     const {error} = registerValidation(req.body)
-    if ( error ) return res.status( 400 ).send( error.details[0].message )
+    if ( error ) return res.status( 400 ).send( error.details[0].message ).send('registration validation')
 
     // check for existing user
     const emailExist = await User.findOne( { email: req.body.email } )
