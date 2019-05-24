@@ -37,7 +37,7 @@
 {    "Title": "Standard M-R-E",
     "Thumbnail": "https://images-na.ssl-images-amazon.com/images/I/91dZBkGfWrL._SL1500_.jpg",
     "Cooktime": "0-5 min",
-    "Instructions": "Open bag.  Empty contents.  Trade random condiments.  Eat it.  Deal with it.  Brace for constipation",
+    "Instructions": "Open bag.  Empty contents.  Deal with it.  Brace for constipation",
     "Ingredients": {
         "FoodAmount": ["1"],
         "FoodType": ["Standard military issued MRE"]
