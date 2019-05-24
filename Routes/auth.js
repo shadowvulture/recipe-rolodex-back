@@ -34,6 +34,9 @@ router.post( '/register', async ( req, res ) =>
     } catch ( err ) {
         res.status(400).send(err)
     }
+        //  create and assign a token
+        const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET )
+        res.header('auth-token', token).send(token)
 } )
 
 //  Login
