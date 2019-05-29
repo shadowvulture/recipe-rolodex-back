@@ -34,12 +34,13 @@ router.post( '/register', async ( req, res ) =>
     } catch ( err ) {
         res.status(400).send(err)
     }
-}
-console.log(savedUser)
+    console.log(savedUser)
 const token = jwt.sign({ _id: savedUser._id }, process.env.TOKEN_SECRET )
 res.header( 'auth-token', token ).send( token )
 console.log(token)
-} )
+
+}
+
 
 //  Login
 router.post( '/login', async ( req, res ) =>
