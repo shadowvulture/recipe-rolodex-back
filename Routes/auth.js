@@ -31,10 +31,13 @@ router.post( '/register', async ( req, res ) =>
         res.send( ( { savedUser } ) )
         console.log(savedUser)
         res.send( { user: user._id } )
-        const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET )
-        res.header('auth-token', token).send(token)
+
     } catch ( err ) {
         res.status(400).send(err)
+    } finally {
+        const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET )
+        res.header( 'auth-token', token ).send( token )
+        console.log(res.header)
     }
 } )
 
@@ -52,7 +55,7 @@ router.post( '/login', async ( req, res ) =>
     //  check if password is valid
     const validPass = await bcrypt.compare( req.body.password, user.password )
     if(!validPass) return res.status(400).send('Incorrect password.  Try a little more brute force?')
-    // res.send(`Successful log in for ${user.name}`)
+    res.send(`Successful log in for ${user.name}`)
 
     //  create and assign a token
     const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET )
