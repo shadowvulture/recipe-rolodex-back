@@ -32,9 +32,9 @@ router.post( '/register', async ( req, res ) =>
         console.log(savedUser).then(newUser => {
         // res.send( { user: newUser._id } )
         if ( newUser ) {
-            var payload = {
-                _id: newUser._id
-                            }
+            // var payload = {
+            //     _id: newUser._id
+            //                 }
                 //  create and assign a token
                 const token = jwt.sign({ _id: newUser._id }, process.env.TOKEN_SECRET )
                 res.header( 'auth-token', token ).send( token )
