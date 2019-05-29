@@ -30,7 +30,7 @@ router.post( '/register', async ( req, res ) =>
         const savedUser = await user.save()
         res.send( ( { savedUser } ) )
         console.log(savedUser).then(newUser => {
-        res.send( { user: newUser._id } )
+        // res.send( { user: newUser._id } )
         if ( newUser ) {
             var payload = {
                 _id: newUser._id
