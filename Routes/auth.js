@@ -26,6 +26,7 @@ router.post( '/register', async ( req, res ) =>
         email: req.body.email,
         password: hashedPassword
     } )
+
     try {
         const savedUser = await user.save()
         res.send( ( { savedUser } ) )
@@ -34,22 +35,19 @@ router.post( '/register', async ( req, res ) =>
 
     } catch ( err ) {
         res.status(400).send(err)
-    } finally {
-        const {error} = loginValidation(req.body)
-        if ( error ) return res.status( 400 ).send( error.details[0].message )
-
-        // check for password match
-        const user = await User.findOne( { email: req.body.email } )
-        if ( !user ) return res.status( 400 ).send( 'Email or password is wrong' )
-
-        //  check if password is valid
-        const validPass = await bcrypt.compare( req.body.password, user.password )
-        if(!validPass) return res.status(400).send('Incorrect password.  Try a little more brute force?')
-        res.send(`Successful log in for ${user.name}`)
-        const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET )
-        res.header( 'auth-token', token ).send( token )
-        console.log(res.header)
     }
+    const {error} = loginValidation(req.body)
+    if ( error ) return res.status( 400 ).send( error.details[0].message )
+    // check for password match
+    const user = await User.findOne( { email: req.body.email } )
+    if ( !user ) return res.status( 400 ).send( 'Email or password is wrong' )
+    //  check if password is valid
+    const validPass = await bcrypt.compare( req.body.password, user.password )
+    if(!validPass) return res.status(400).send('Incorrect password.  Try a little more brute force?')
+    res.send(`Successful log in for ${user.name}`)
+    const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET )
+    res.header( 'auth-token', token ).send( token )
+    console.log(res.header)
 } )
 
 //  Login
