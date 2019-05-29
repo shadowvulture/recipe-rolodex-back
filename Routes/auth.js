@@ -33,13 +33,12 @@ router.post( '/register', async ( req, res ) =>
         res.send( { user: user._id } )
     } catch ( err ) {
         res.status(400).send(err)
-    } finally {
-        {   console.log(savedUser)
-            const token = jwt.sign({ _id: savedUser._id }, process.env.TOKEN_SECRET )
-            res.header( 'auth-token', token ).send( token )
-            console.log(token)
-        }
     }
+}
+console.log(savedUser)
+const token = jwt.sign({ _id: savedUser._id }, process.env.TOKEN_SECRET )
+res.header( 'auth-token', token ).send( token )
+console.log(token)
 } )
 
 //  Login
