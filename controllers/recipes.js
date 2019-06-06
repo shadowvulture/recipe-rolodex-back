@@ -20,7 +20,7 @@ router.get('/id/:id', (req, res) => {
 })
 
 // Create a Recipe
-router.post('/new-recipe', verify, (req, res) => {
+router.post('/new-recipe', (req, res) => {
   let newRecipe = req.body
   console.log(newRecipe)
   Recipes.create(newRecipe).then(created => {
